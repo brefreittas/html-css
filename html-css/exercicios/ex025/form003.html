@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        h1 {
+            margin: 10px 0px 10px 10px;
+        }
+
+        #nometxt, #mediatxt, #periodotxt, #diatxt, #horatxt{ 
+            margin: 0px 0px 0px 10px;
+        }
+
+        #imedia, #imes, #idia, #ihora{
+            margin: 10px 0px 0px 10px;
+        }
+
+        #inome {
+            margin: 0px 0px 0px 10px;
+        }
+
+        .botao {
+            margin: 10px 0px 0px 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando formulários</h1>
+    <form 
+    action="cadastro.php" 
+    method="get"
+    autocomplete="on">
+        <div>
+            <label for="inome" id="nometxt">Nome</label>
+            <input 
+            type="text" 
+            name="nome" 
+            id="inome" 
+            required 
+            maxlength="30"
+            placeholder="Nome completo"
+            autocomplete="name">
+        </div>
+
+        <div>
+            <label for="imedia" id="mediatxt">Média</label>
+            <input 
+            type="number" 
+            name="media" 
+            id="imedia" 
+            min="0" 
+            max="10"
+            placeholder="0-10"
+            step="0.1">
+        </div>
+
+        <div>
+            <label for="imes" id="periodotxt">Período Letivo</label>
+            <input 
+            type="month"
+            name="mes"
+            id="imes"
+            value="2022-09">
+        </div>
+
+        <div>
+            <label for="idia" id="diatxt">Dia da Prova</label>
+            <input 
+            type="date" 
+            name="dia" 
+            id="idia"
+            value="2022-09-03">
+        </div>
+
+        <div>
+            <label for="ihora" id="horatxt">Horário da prova</label>
+            <input type="time" 
+            name="hora" 
+            id="ihora">
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar" class="botao">
+            <input type="reset" value="Limpar" class="botao">
+        </div>
+    </form>
+</body>
+</html>
